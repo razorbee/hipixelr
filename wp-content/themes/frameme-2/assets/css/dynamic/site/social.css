@@ -1,0 +1,12 @@
+.social-list a {
+	color: $regular_text_color;
+}
+.social-list a:hover {
+	color: $regular_link_color;
+}
+.invert .social-list a {
+	color: @darken($invert_text_color, 50);
+}
+.invert .social-list a:hover {
+	color: $invert_accent_color_1;
+}

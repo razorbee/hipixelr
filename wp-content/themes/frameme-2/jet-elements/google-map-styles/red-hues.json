@@ -1,0 +1,4 @@
+/**
+ * Name: Red Hues
+ */
+[{"stylers":[{"hue": "#c01d2e"}]},{"featureType": "road","elementType": "labels","stylers":[{"visibility": "off"}]},{"featureType": "road","elementType": "geometry","stylers":[{"lightness": 100},{"visibility": "simplified"}]}]

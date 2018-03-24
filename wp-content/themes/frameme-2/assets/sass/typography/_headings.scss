@@ -1,0 +1,90 @@
+h1,
+h3,
+h6{
+	text-transform: uppercase;
+}
+
+.custom-heading-pseudo-left {
+	.elementor-widget-container {
+		flex-wrap: nowrap;
+		display: flex;
+		align-items: center;
+		&:after {
+			content: ' ';
+			width: 100%;
+			max-width: 104px;
+			height: 10px;
+			position: relative;
+			border-width: 1px 0px 1px 0px;
+			border-style: solid;
+			border-color: $color__grey_scale;
+			right: 0;
+			margin-left: 15px;
+		}
+	}
+	.elementor-heading-title {
+		flex: 0 0 auto;
+	}
+}
+
+.custom-heading-pseudo-center {
+	.elementor-widget-container {
+		flex-wrap: nowrap;
+		display: flex;
+		align-items: center;
+		.elementor-heading-title {
+			flex: 0 0 auto;
+		}
+		&:after,
+		&:before {
+			content: ' ';
+			width: 100%;
+			height: 10px;
+			position: relative;
+			border-width: 1px 0px 1px 0px;
+			border-style: solid;
+			border-color: $color__grey_scale;
+		}
+		&:after {
+			right: 0;
+			margin-left: 15px;
+		}
+		&:before {
+			left: 0;
+			margin-right: 15px;
+		}
+	}
+}
+
+h1, h2, h3 {
+	margin: 0 0 30px;
+}
+
+h4, h5, h6 {
+	margin: 0 0 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p + & {
+		margin-top: 25px;
+	}
+
+	&.title-decoration {
+		@include title-zigzag;
+
+		&__bottom {
+			@include title-zigzag-bottom;
+		}
+		&__big {
+			@include title-zigzag-big;
+
+			&.title-decoration__bottom {
+				@include title-zigzag-big-bottom;
+			}
+		}
+	}
+}

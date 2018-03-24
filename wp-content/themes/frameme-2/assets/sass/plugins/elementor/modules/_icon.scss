@@ -1,0 +1,21 @@
+.elementor-icon {
+	font-size: 32px;
+	
+	.elementor-view-stacked & {
+		padding: .7186em;
+	}
+	.elementor-view-framed & {
+		border-color: currentColor;
+		border-width: 2px;
+		padding: .6563em;
+	}
+
+.elementor-widget-icon {
+	&.elementor-view-framed {
+		.elementor-icon {
+			margin-bottom: 30px;
+			position: relative;
+		}
+	}
+}
+}

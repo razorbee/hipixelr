@@ -1,0 +1,12 @@
+.site-info {
+	@include font-size(12/16);
+}
+.footer-copyright a {
+	padding-left: 10px;
+}
+.footer-area .widget-title.title-decoration:before, .footer-area .widget-title.title-decoration:after{
+	display: none;
+}
+
+@import "footer/layout-style-1";
+@import "footer/layout-style-2";

@@ -1,0 +1,225 @@
+.cherry-popup {
+	.popup-type-login &-login__login-in,
+	.popup-type-signup &-register__sign-up,
+	.popup-type-subscribe &-subscribe__submit,
+	.popup-type-default &-subscribe__submit {
+		padding-top: 15.5px;
+		padding-bottom: 15.5px;
+		@include font-size(.857);
+		text-transform: uppercase;
+		border-radius: 3px;
+		transition: 300ms all ease;
+	}
+
+	.popup-type-subscribe &-subscribe__submit,
+	.popup-type-default &-subscribe__submit {
+		padding: 13px 30px;
+	}
+
+	.popup-type-login &-login__login-in,
+	.popup-type-signup &-register__sign-up {
+		width: 100%;
+	}
+
+	&-login__signup-message {
+		margin-top: 12px;
+	}
+
+	.popup-type-signup .cherry-popup-register &-signup__login-user {
+		margin-top: 17px;
+		margin-bottom: 17px;
+	}
+
+	&-spinner {
+		width: 19px;
+		height: 19px;
+	}
+
+	&-login__remember {
+		margin-bottom: 15px;
+	}
+
+	&-login__signup-message {
+		flex-wrap: wrap;
+	}
+	
+	.popup-type-login &-login__message,
+	.popup-type-signup &-register__message {
+		position: absolute;
+		left: 30px;
+		right: 30px;
+		bottom: 0;
+		margin: 5px;
+		span {
+			font-size: 11px;
+			line-height: 1.1;
+		}
+	}
+
+	&-login__use-mail,
+	&-signup__new-user {
+		.cherry-popup.cherry-popup-wrapper & {
+			margin-top: 22px;
+			margin-bottom: 18px;
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	&-login__input-group .cherry-popup-login__wrap,
+	&-register__input-group .cherry-popup-register__wrap {
+		margin: 5px 0;
+	}
+
+	&-subscribe__input-group {
+		margin-bottom: 48px;
+	}
+
+	&.invert .cherry-popup-subscribe__input {
+		background-color: $color__white;
+		border-color: $color__white;
+		box-shadow: inset 0 0 0 1px $color__white;
+	}
+
+	&-close-button {
+		.cherry-popup-wrapper & {
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 36px;
+			height: 36px;
+			@include media-breakpoint-up(sm) {
+				left: calc(100% + 6px);
+				bottom: calc(100% + 4px);
+				top: auto;
+				right: auto;
+			}
+			span {
+				margin-right: 1px;
+				width: 36px;
+				height: 36px;
+				line-height: 36px;
+				font-size: 22px;
+				border-radius: 50%;
+				transition: 300ms all ease;
+			}
+		}
+	}
+
+	&-check {
+		.popup-type-default & {
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+		}
+		.cherry-popup-wrapper & {
+			.marker {
+				margin-right: 10px;
+				border: 1px solid;
+				span {
+					font-size: 20px;
+				}
+			}
+			.label {
+				@include font-size(1);
+			}
+		}
+	}
+	&-subscribe__form {
+		position: relative;
+	}
+	&-subscribe__message {
+		position: absolute;
+		left: 18px;
+		right: 18px;
+		bottom: calc(100% - 8px);
+		padding: 1.5px 3px;
+		max-width: 232px;
+		font-size: 11px;
+		line-height: 13px;
+		background-color: $color__not-valid;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px 4px 0 0;
+			border-color: $color__not-valid transparent transparent transparent;
+		}
+		span {
+			color: $color__white;
+		}
+		&.success-type {
+			background-color: $color__valid;
+			&:before {
+				border-color: $color__valid transparent transparent transparent;
+			}
+			span {
+				color: $color__white;
+			}
+		}
+	}
+
+	&.cherry-popup--custom-bg {
+		.cherry-popup-container {
+			min-height: 260px;
+			&:before {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 206px;
+				height: 329px;
+				background-image: url('assets/images/popup-subscribe-bg.png');
+			}
+		}
+		.cherry-popup-subscribe__input {
+			max-width: 272px;
+		}
+		.cherry-popup-title,
+		.cherry-popup-content {
+			max-width: 360px;
+		}
+		.cherry-popup-title {
+			text-align: left;
+			margin-bottom: 5px;
+		}
+		.cherry-popup-content {
+			margin-bottom: 24px;
+		}
+	}
+
+	.wp-social-login-widget {
+		.wp-social-login-provider-list {
+			display: block;
+			padding: 0;
+			.wp-social-login-provider {
+				width: 100%;
+				margin: 0;
+				padding-top: 15.5px;
+				padding-bottom: 15.5px;
+				@include font-size(.857);
+				
+				text-transform: uppercase;
+				text-align: center;
+
+				border-radius: 3px;
+
+				&:before {
+					vertical-align: text-bottom;
+				}
+
+				& + .wp-social-login-provider {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

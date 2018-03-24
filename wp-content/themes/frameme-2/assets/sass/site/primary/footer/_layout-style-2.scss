@@ -1,0 +1,35 @@
+.site-footer.style-2 {
+	.footer-container {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		@include media-breakpoint-up(md) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+	}
+
+	.site-info {
+		text-align: center;
+
+		.contact-block {
+			@include font-size(.875);
+
+			&__item {
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+		}
+
+		* + .contact-block,
+		* + .footer-menu {
+			margin-top: 10px;
+		}
+
+		* + .social-list,
+		* + .footer-copyright {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}

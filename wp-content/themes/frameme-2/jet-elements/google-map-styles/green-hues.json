@@ -1,0 +1,4 @@
+/**
+ * Name: Green Hues
+ */
+[{"stylers":[{"hue": "#9dc414"}]},{"featureType": "road","elementType": "labels","stylers":[{"visibility": "off"}]},{"featureType": "road","elementType": "geometry","stylers":[{"lightness": 100},{"visibility": "simplified"}]}]

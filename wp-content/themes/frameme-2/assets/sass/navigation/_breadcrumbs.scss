@@ -1,0 +1,56 @@
+.breadcrumbs {
+	position: relative;
+	padding: 20px 0 20px;
+
+	&:before {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-position: 50% 50%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	.row {
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 10;
+	}
+	&__title,
+	&__items {
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
+	}
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__browse {
+		display: inline-block;
+		margin-right: .5em;
+	}
+	&__wrap {
+		margin: 5px 0;
+		display: inline-block;
+	}
+	&__item {
+		display: inline-block;
+		text-transform: uppercase;
+
+		&-sep {
+			margin: 0 1.5px;
+		}
+		&-link {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&-target {
+			text-decoration: underline;
+		}
+	}
+}

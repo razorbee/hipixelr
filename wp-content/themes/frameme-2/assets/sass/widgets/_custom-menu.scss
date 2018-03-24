@@ -1,0 +1,24 @@
+.elementor-widget-wp-widget-nav_menu {
+  .menu{
+    .menu-item {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      a {
+        &:before {
+          @include font-awesome-icon;
+          content: '\f061';
+          font-weight: lighter;
+          margin-right: 15px;
+          transition: 0.2s ease all;
+        }
+        &:hover {
+          &:before {
+            transform: translateX(40%);
+            transition: 0.2s ease all;
+          }
+        }
+      }
+    }
+  }
+}
